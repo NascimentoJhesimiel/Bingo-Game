@@ -9,7 +9,6 @@ public class MenuBingo {
     public static void iniciarJogo(Scanner scanner) {
         Cartela bingo = new Cartela();
 
-        // Cria o jogo de bingo (gera uma cartela)
         bingo.createGame(1);
 
         System.out.println("=== BEM-VINDO AO JOGO DE BINGO ===\n");
@@ -19,14 +18,7 @@ public class MenuBingo {
         bingo.mostrarCartela();
         System.out.println();
 
-        // Inicia a navegação do menu
         navegarMenu(scanner, bingo);
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        iniciarJogo(scanner);
-        scanner.close();
     }
 
     private static void navegarMenu(Scanner scanner, Cartela bingo) {

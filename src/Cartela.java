@@ -16,12 +16,9 @@ public class Cartela implements IBingo {
 
   @Override
   public Cartela createGame(int quantity) {
-    // O parâmetro 'quantity' não é usado nesta implementação,
-    // pois o método cria uma única cartela.
     this.cartela = new int[5][5];
     List<Integer> numerosDisponiveis = new ArrayList<>();
 
-    // Preenche cada coluna com números aleatórios e únicos
     for (int coluna = 0; coluna < 5; coluna++) {
       numerosDisponiveis.clear();
       int inicioIntervalo = coluna * 15 + 1;
@@ -79,7 +76,6 @@ public class Cartela implements IBingo {
     return numerosSorteados.contains(number);
   }
 
-  // Método adicional para visualizar a cartela gerada
   public void mostrarCartela() {
     System.out.println("B\tI\tN\tG\tO");
     for (int i = 0; i < 5; i++) {
